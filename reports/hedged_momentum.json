@@ -1,0 +1,48 @@
+{
+  "experiment": "beta_hedged_and_sector_neutral_momentum",
+  "purpose": "last untested construction: can removing market exposure leave something behind?",
+  "beta_decomposition_strategy_vs_universe": {
+    "beta": 0.306,
+    "r_squared": 0.412,
+    "annualised_alpha": 0.0355,
+    "alpha_t_stat": 1.26,
+    "reading": "59% of variance is idiosyncratic, but the alpha is not statistically significant at |t|>2"
+  },
+  "hedged_results": {
+    "unhedged": {
+      "cagr": 0.0984,
+      "sharpe": 1.13,
+      "max_drawdown": -0.122
+    },
+    "rolling_beta_hedge_to_zero": {
+      "cagr": 0.0854,
+      "sharpe": 0.421,
+      "max_drawdown": -0.7131,
+      "note": "rolling beta estimator produced unstable sizing and a pathological drawdown; treated as an implementation artefact, not evidence"
+    },
+    "fixed_ratio_0.20": {
+      "cagr": 0.045,
+      "sharpe": 1.144,
+      "max_drawdown": -0.0994
+    },
+    "fixed_ratio_0.306": {
+      "cagr": 0.0387,
+      "sharpe": 0.922,
+      "max_drawdown": -0.0941
+    },
+    "fixed_ratio_0.50": {
+      "cagr": 0.0266,
+      "sharpe": 0.474,
+      "max_drawdown": -0.111
+    },
+    "interpretation": "the stable fixed hedge is the fair test. At a 0.2 hedge ratio Sharpe is flat at 1.144 versus 1.130 unhedged, i.e. inside noise, while return halves. Removing beta removes return and buys no improvement in risk-adjusted quality. There is no isolated alpha to harvest."
+  },
+  "beta_benchmark_same_span": {
+    "cagr": 0.2118,
+    "sharpe": 1.304,
+    "max_drawdown": -0.2193
+  },
+  "decision": "rejected_for_capital_deployment",
+  "conclusion": "every construction has now been ruled out: long/short, trend, mean reversion, volatility breakout, intraday, reversal, cross-sectional momentum, beta-hedged momentum. The cross-sectional momentum signal is statistically real (IC +0.0174, t=2.93) but its risk-adjusted quality (Sharpe 1.13) is below simply holding the universe (Sharpe 1.30), and hedging it away does not reveal hidden alpha. It is a lower-drawdown implementation of beta, not a source of excess return.",
+  "audit_carried_in_this_file": "see reports/audit_and_momentum.json for the survivorship-bias finding and the reversal warmup bug"
+}

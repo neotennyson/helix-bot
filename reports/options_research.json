@@ -1,0 +1,877 @@
+{
+  "generated_at": "2026-10-07T11:08:57.157313+00:00",
+  "research_only": true,
+  "real_option_quotes": false,
+  "data_source": "synthetic_black_scholes_on_dhan_daily",
+  "underlying_symbol": "48704",
+  "underlying_bars": 2552,
+  "disclaimer": "Black-Scholes premiums on a real underlying path with an assumed constant IV surface. No bid/ask, no skew, no IV term structure, no vega shock. Modelled research only.",
+  "runs": 36,
+  "best_by_sharpe": {
+    "strategy": "cash_secured_put",
+    "implied_volatility": 0.16,
+    "delta_target": 0.35,
+    "holding_days": 10
+  },
+  "best_sharpe": 3.5147852918640656,
+  "any_passed_promotion": false,
+  "results": [
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.16,
+        "delta_target": 0.35,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.29521492043661834,
+        "cagr": 0.02440787590941973,
+        "sharpe": 3.5147852918640656,
+        "sortino": 4.767866264281369,
+        "max_drawdown": -0.013301841113711799,
+        "profit_factor": 0.8971619201233115,
+        "trades": 503,
+        "win_rate": 0.7932405566600398
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 27,
+        "premium_stop": 90,
+        "premium_target": 386
+      },
+      "excess_cagr_over_cash": -0.03559212409058027
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.16,
+        "delta_target": 0.25,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.2101029009562594,
+        "cagr": 0.01793721420908745,
+        "sharpe": 3.401461868390443,
+        "sortino": 4.373118702595176,
+        "max_drawdown": -0.014347569743187738,
+        "profit_factor": 0.8697695756375405,
+        "trades": 577,
+        "win_rate": 0.8024263431542461
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 12,
+        "premium_stop": 109,
+        "premium_target": 456
+      },
+      "excess_cagr_over_cash": -0.04206278579091255
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.16,
+        "delta_target": 0.35,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.26702476680238685,
+        "cagr": 0.02230855645561025,
+        "sharpe": 3.0280866079723947,
+        "sortino": 4.450522258534293,
+        "max_drawdown": -0.012466544100733556,
+        "profit_factor": 0.8773470046057812,
+        "trades": 316,
+        "win_rate": 0.8069620253164557
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 3,
+        "premium_stop": 59,
+        "premium_target": 254
+      },
+      "excess_cagr_over_cash": -0.03769144354438975
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.14,
+        "delta_target": 0.35,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.24692748239424778,
+        "cagr": 0.02078589356748828,
+        "sharpe": 3.0193282871310787,
+        "sortino": 3.9651305129986536,
+        "max_drawdown": -0.015578817391150968,
+        "profit_factor": 0.7575355052403497,
+        "trades": 544,
+        "win_rate": 0.7647058823529411
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 24,
+        "premium_stop": 112,
+        "premium_target": 408
+      },
+      "excess_cagr_over_cash": -0.03921410643251172
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.16,
+        "delta_target": 0.25,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.19101896109528327,
+        "cagr": 0.016429850649480437,
+        "sharpe": 2.973184912967291,
+        "sortino": 4.132273842751979,
+        "max_drawdown": -0.011945712982533885,
+        "profit_factor": 0.8389623874445802,
+        "trades": 375,
+        "win_rate": 0.8026666666666666
+      },
+      "exit_reason_counts": {
+        "premium_stop": 74,
+        "premium_target": 301
+      },
+      "excess_cagr_over_cash": -0.04357014935051956
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.16,
+        "delta_target": 0.25,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.16222917116245572,
+        "cagr": 0.014113894155403317,
+        "sharpe": 2.82839345277572,
+        "sortino": 4.233793247358027,
+        "max_drawdown": -0.005407118767508323,
+        "profit_factor": 0.8089799044567161,
+        "trades": 330,
+        "win_rate": 0.7424242424242424
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 6,
+        "premium_stop": 83,
+        "premium_target": 241
+      },
+      "excess_cagr_over_cash": -0.04588610584459668
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.16,
+        "delta_target": 0.25,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.15805983691309788,
+        "cagr": 0.013831064044427244,
+        "sharpe": 2.736470216815524,
+        "sortino": 3.5787620419756174,
+        "max_drawdown": -0.007140355189361736,
+        "profit_factor": 0.7492588979919412,
+        "trades": 502,
+        "win_rate": 0.7689243027888446
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 30,
+        "premium_stop": 106,
+        "premium_target": 366
+      },
+      "excess_cagr_over_cash": -0.046168935955572754
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.16,
+        "delta_target": 0.35,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.2150080657510336,
+        "cagr": 0.018396982124037287,
+        "sharpe": 2.722274277644824,
+        "sortino": 3.7898093933736505,
+        "max_drawdown": -0.008063154019283814,
+        "profit_factor": 0.6977240214618545,
+        "trades": 448,
+        "win_rate": 0.7098214285714286
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 53,
+        "premium_stop": 102,
+        "premium_target": 293
+      },
+      "excess_cagr_over_cash": -0.04160301787596271
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.14,
+        "delta_target": 0.35,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.23143776374928948,
+        "cagr": 0.019597059329673927,
+        "sharpe": 2.6914268860453916,
+        "sortino": 3.756600089525466,
+        "max_drawdown": -0.014040892911133973,
+        "profit_factor": 0.75373665890205,
+        "trades": 356,
+        "win_rate": 0.7780898876404494
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 1,
+        "premium_stop": 78,
+        "premium_target": 277
+      },
+      "excess_cagr_over_cash": -0.04040294067032607
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.14,
+        "delta_target": 0.25,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.16453230229977467,
+        "cagr": 0.014301069888178919,
+        "sharpe": 2.6520191036174388,
+        "sortino": 3.551515168093473,
+        "max_drawdown": -0.010859434680095204,
+        "profit_factor": 0.742533518491328,
+        "trades": 407,
+        "win_rate": 0.7764127764127764
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 1,
+        "premium_stop": 91,
+        "premium_target": 315
+      },
+      "excess_cagr_over_cash": -0.04569893011182108
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.16,
+        "delta_target": 0.25,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.17123777447333466,
+        "cagr": 0.014844119331138161,
+        "sharpe": 2.650535928895885,
+        "sortino": 4.074286795467433,
+        "max_drawdown": -0.010266234135548058,
+        "profit_factor": 0.931380956044732,
+        "trades": 216,
+        "win_rate": 0.8148148148148148
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 1,
+        "premium_stop": 40,
+        "premium_target": 175
+      },
+      "excess_cagr_over_cash": -0.045155880668861836
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.14,
+        "delta_target": 0.25,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.16160780261328034,
+        "cagr": 0.014063337851426105,
+        "sharpe": 2.617414866665322,
+        "sortino": 3.230648146317799,
+        "max_drawdown": -0.016710341123144623,
+        "profit_factor": 0.710810546173776,
+        "trades": 601,
+        "win_rate": 0.78369384359401
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 12,
+        "premium_stop": 125,
+        "premium_target": 464
+      },
+      "excess_cagr_over_cash": -0.04593666214857389
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.16,
+        "delta_target": 0.35,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.23143710659425532,
+        "cagr": 0.01959700860610014,
+        "sharpe": 2.542411073462168,
+        "sortino": 4.0362968855598,
+        "max_drawdown": -0.011604143217203489,
+        "profit_factor": 1.0072650898975242,
+        "trades": 181,
+        "win_rate": 0.8066298342541437
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 4,
+        "premium_stop": 32,
+        "premium_target": 145
+      },
+      "excess_cagr_over_cash": -0.040402991393899856
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.12,
+        "delta_target": 0.35,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.2049358279625093,
+        "cagr": 0.017531227963498708,
+        "sharpe": 2.4755927036422176,
+        "sortino": 3.337706065205636,
+        "max_drawdown": -0.012721122907453308,
+        "profit_factor": 0.6777546922968354,
+        "trades": 402,
+        "win_rate": 0.753731343283582
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 1,
+        "premium_stop": 98,
+        "premium_target": 303
+      },
+      "excess_cagr_over_cash": -0.04246877203650129
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.16,
+        "delta_target": 0.35,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.2025986283368626,
+        "cagr": 0.017347071203640763,
+        "sharpe": 2.46519796693812,
+        "sortino": 3.7770148031214914,
+        "max_drawdown": -0.007726669335641367,
+        "profit_factor": 0.7026148686790585,
+        "trades": 284,
+        "win_rate": 0.7112676056338029
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 13,
+        "premium_stop": 72,
+        "premium_target": 199
+      },
+      "excess_cagr_over_cash": -0.042652928796359235
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.12,
+        "delta_target": 0.35,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.18922368477165774,
+        "cagr": 0.016286924130287206,
+        "sharpe": 2.3688981386229484,
+        "sortino": 2.986075846589626,
+        "max_drawdown": -0.018123103655891426,
+        "profit_factor": 0.6353798981896419,
+        "trades": 584,
+        "win_rate": 0.7517123287671232
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 16,
+        "premium_stop": 136,
+        "premium_target": 432
+      },
+      "excess_cagr_over_cash": -0.04371307586971279
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.14,
+        "delta_target": 0.25,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.14567160720624206,
+        "cagr": 0.012758271413971345,
+        "sharpe": 2.2920755674718136,
+        "sortino": 3.3029255436504075,
+        "max_drawdown": -0.01194448016318339,
+        "profit_factor": 0.7369246254545483,
+        "trades": 246,
+        "win_rate": 0.7845528455284553
+      },
+      "exit_reason_counts": {
+        "premium_stop": 53,
+        "premium_target": 193
+      },
+      "excess_cagr_over_cash": -0.04724172858602865
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.14,
+        "delta_target": 0.35,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.20201599506343837,
+        "cagr": 0.01730111280100699,
+        "sharpe": 2.2852482500563194,
+        "sortino": 3.4062641332252093,
+        "max_drawdown": -0.012706411983759103,
+        "profit_factor": 0.7946061961158074,
+        "trades": 206,
+        "win_rate": 0.7912621359223301
+      },
+      "exit_reason_counts": {
+        "premium_stop": 43,
+        "premium_target": 163
+      },
+      "excess_cagr_over_cash": -0.04269888719899301
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.14,
+        "delta_target": 0.35,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.17325889021364338,
+        "cagr": 0.015069246520394541,
+        "sharpe": 2.2483748458298747,
+        "sortino": 2.9882004789431775,
+        "max_drawdown": -0.009834975604018581,
+        "profit_factor": 0.6010161233071101,
+        "trades": 482,
+        "win_rate": 0.6887966804979253
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 45,
+        "premium_stop": 125,
+        "premium_target": 312
+      },
+      "excess_cagr_over_cash": -0.044930753479605456
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.14,
+        "delta_target": 0.25,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.12607238678664334,
+        "cagr": 0.011176360040013877,
+        "sharpe": 2.1955374745155343,
+        "sortino": 2.755039544449354,
+        "max_drawdown": -0.009622673848929009,
+        "profit_factor": 0.6342794641345136,
+        "trades": 539,
+        "win_rate": 0.7402597402597403
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 20,
+        "premium_stop": 133,
+        "premium_target": 386
+      },
+      "excess_cagr_over_cash": -0.04882363995998612
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.14,
+        "delta_target": 0.25,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.12439244066462662,
+        "cagr": 0.010989745848010601,
+        "sharpe": 2.1842122400714095,
+        "sortino": 3.044489272726456,
+        "max_drawdown": -0.008411367338720721,
+        "profit_factor": 0.6133327464908297,
+        "trades": 363,
+        "win_rate": 0.7079889807162535
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 3,
+        "premium_stop": 104,
+        "premium_target": 256
+      },
+      "excess_cagr_over_cash": -0.049010254151989396
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.12,
+        "delta_target": 0.25,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.13019292864537713,
+        "cagr": 0.011474817070642018,
+        "sharpe": 2.0984174319296787,
+        "sortino": 2.8753838323855065,
+        "max_drawdown": -0.011448839002221267,
+        "profit_factor": 0.6328150033500102,
+        "trades": 292,
+        "win_rate": 0.7602739726027398
+      },
+      "exit_reason_counts": {
+        "premium_stop": 70,
+        "premium_target": 222
+      },
+      "excess_cagr_over_cash": -0.04852518292935798
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.14,
+        "delta_target": 0.35,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.16871067543089713,
+        "cagr": 0.014639791490005383,
+        "sharpe": 2.088810181963126,
+        "sortino": 3.0298248071664697,
+        "max_drawdown": -0.00652248347441442,
+        "profit_factor": 0.5819781363039523,
+        "trades": 320,
+        "win_rate": 0.675
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 15,
+        "premium_stop": 92,
+        "premium_target": 213
+      },
+      "excess_cagr_over_cash": -0.045360208509994615
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.12,
+        "delta_target": 0.25,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.1305394365463588,
+        "cagr": 0.011503722608966926,
+        "sharpe": 2.076410945769194,
+        "sortino": 2.621237253082263,
+        "max_drawdown": -0.013215753572447975,
+        "profit_factor": 0.6204971825345684,
+        "trades": 448,
+        "win_rate": 0.7566964285714286
+      },
+      "exit_reason_counts": {
+        "premium_stop": 109,
+        "premium_target": 339
+      },
+      "excess_cagr_over_cash": -0.04849627739103307
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.12,
+        "delta_target": 0.35,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.17199445992287954,
+        "cagr": 0.014905223137841483,
+        "sharpe": 2.017328964982261,
+        "sortino": 2.907138348917422,
+        "max_drawdown": -0.014917476994110945,
+        "profit_factor": 0.6776413819529717,
+        "trades": 235,
+        "win_rate": 0.7702127659574468
+      },
+      "exit_reason_counts": {
+        "premium_stop": 54,
+        "premium_target": 181
+      },
+      "excess_cagr_over_cash": -0.045094776862158514
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.16,
+        "delta_target": 0.35,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.16572642802886617,
+        "cagr": 0.014397984524324281,
+        "sharpe": 1.970432407884768,
+        "sortino": 3.218652088544631,
+        "max_drawdown": -0.008967200373805162,
+        "profit_factor": 0.6660480183486951,
+        "trades": 174,
+        "win_rate": 0.7011494252873564
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 1,
+        "premium_stop": 51,
+        "premium_target": 122
+      },
+      "excess_cagr_over_cash": -0.04560201547567572
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.16,
+        "delta_target": 0.25,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.11538076615303194,
+        "cagr": 0.010396981051062903,
+        "sharpe": 1.9208585108289968,
+        "sortino": 2.968363116705514,
+        "max_drawdown": -0.008149665414544982,
+        "profit_factor": 0.6484440345306632,
+        "trades": 197,
+        "win_rate": 0.700507614213198
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 2,
+        "premium_stop": 58,
+        "premium_target": 137
+      },
+      "excess_cagr_over_cash": -0.049603018948937094
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.12,
+        "delta_target": 0.35,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.13603606780962685,
+        "cagr": 0.01201051768742678,
+        "sharpe": 1.828825962088594,
+        "sortino": 2.3509346507247315,
+        "max_drawdown": -0.011955895253394244,
+        "profit_factor": 0.5270817268326212,
+        "trades": 534,
+        "win_rate": 0.6760299625468165
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 26,
+        "premium_stop": 159,
+        "premium_target": 349
+      },
+      "excess_cagr_over_cash": -0.04798948231257322
+    },
+    {
+      "grid": {
+        "strategy": "cash_secured_put",
+        "implied_volatility": 0.12,
+        "delta_target": 0.25,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.11097203825759183,
+        "cagr": 0.009858695592786848,
+        "sharpe": 1.7869476203524481,
+        "sortino": 2.1005573429172597,
+        "max_drawdown": -0.01972284257697221,
+        "profit_factor": 0.5628110645169814,
+        "trades": 650,
+        "win_rate": 0.7646153846153846
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 9,
+        "premium_stop": 147,
+        "premium_target": 494
+      },
+      "excess_cagr_over_cash": -0.05014130440721315
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.14,
+        "delta_target": 0.35,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.14565268439192836,
+        "cagr": 0.012756712003588522,
+        "sharpe": 1.7742679114256381,
+        "sortino": 2.777549753582047,
+        "max_drawdown": -0.011164886123491535,
+        "profit_factor": 0.5840191843971215,
+        "trades": 193,
+        "win_rate": 0.6787564766839378
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 1,
+        "premium_stop": 61,
+        "premium_target": 131
+      },
+      "excess_cagr_over_cash": -0.047243287996411476
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.12,
+        "delta_target": 0.35,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.13619319076379588,
+        "cagr": 0.011974224951730061,
+        "sharpe": 1.7634913222144428,
+        "sortino": 2.4663588001598296,
+        "max_drawdown": -0.009638322396207766,
+        "profit_factor": 0.5243950841044128,
+        "trades": 351,
+        "win_rate": 0.6666666666666666
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 9,
+        "premium_stop": 111,
+        "premium_target": 231
+      },
+      "excess_cagr_over_cash": -0.048025775048269936
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.14,
+        "delta_target": 0.25,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.10336997392189029,
+        "cagr": 0.009212497074836401,
+        "sharpe": 1.747982079788563,
+        "sortino": 2.6146086045329264,
+        "max_drawdown": -0.009049292976203382,
+        "profit_factor": 0.5759888939241856,
+        "trades": 219,
+        "win_rate": 0.684931506849315
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 1,
+        "premium_stop": 69,
+        "premium_target": 149
+      },
+      "excess_cagr_over_cash": -0.0507875029251636
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.12,
+        "delta_target": 0.25,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.09397461284907238,
+        "cagr": 0.008408261534839312,
+        "sharpe": 1.6289180208164846,
+        "sortino": 2.3641422033850708,
+        "max_drawdown": -0.005981090548978885,
+        "profit_factor": 0.5156762311458701,
+        "trades": 266,
+        "win_rate": 0.6578947368421053
+      },
+      "exit_reason_counts": {
+        "premium_stop": 91,
+        "premium_target": 175
+      },
+      "excess_cagr_over_cash": -0.051591738465160686
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.12,
+        "delta_target": 0.25,
+        "holding_days": 21
+      },
+      "metrics": {
+        "total_return": 0.09204790439340549,
+        "cagr": 0.008242563260687064,
+        "sharpe": 1.6158097735887185,
+        "sortino": 2.137488591886807,
+        "max_drawdown": -0.00963339244007455,
+        "profit_factor": 0.5102355210939535,
+        "trades": 399,
+        "win_rate": 0.6791979949874687
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 4,
+        "premium_stop": 125,
+        "premium_target": 270
+      },
+      "excess_cagr_over_cash": -0.051757436739312934
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.12,
+        "delta_target": 0.35,
+        "holding_days": 42
+      },
+      "metrics": {
+        "total_return": 0.12300986084031473,
+        "cagr": 0.010873791488542839,
+        "sharpe": 1.5075611899229056,
+        "sortino": 2.2450862010694674,
+        "max_drawdown": -0.012115475944970089,
+        "profit_factor": 0.5137481978848801,
+        "trades": 220,
+        "win_rate": 0.6545454545454545
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 1,
+        "premium_stop": 75,
+        "premium_target": 144
+      },
+      "excess_cagr_over_cash": -0.04912620851145716
+    },
+    {
+      "grid": {
+        "strategy": "covered_call",
+        "implied_volatility": 0.12,
+        "delta_target": 0.25,
+        "holding_days": 10
+      },
+      "metrics": {
+        "total_return": 0.08387522438388606,
+        "cagr": 0.0075677676405281336,
+        "sharpe": 1.4678249551732516,
+        "sortino": 1.753784979008586,
+        "max_drawdown": -0.010799854781946006,
+        "profit_factor": 0.49800989339396895,
+        "trades": 591,
+        "win_rate": 0.6971235194585449
+      },
+      "exit_reason_counts": {
+        "expiry_settlement": 15,
+        "premium_stop": 174,
+        "premium_target": 402
+      },
+      "excess_cagr_over_cash": -0.052432232359471864
+    }
+  ]
+}

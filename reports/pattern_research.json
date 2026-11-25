@@ -1,0 +1,63 @@
+{
+  "experiment": "pattern_based_w_curve_double_bottom",
+  "motivation": "the one published signal I found and never tested: structure-based rather than indicator-based, 3:1 payoff, 20-day holds, ~12 turns/year",
+  "signal_test": {
+    "overlapping_windows": {
+      "excess_20d": 0.0052,
+      "t_stat": 2.65,
+      "excess_40d": 0.0075
+    },
+    "non_overlapping_windows": {
+      "excess_20d": 0.0035,
+      "t_20d": 0.09,
+      "excess_40d": 0.0086,
+      "t_40d": 0.07
+    },
+    "finding": "the apparent significance was an artifact of overlapping forward-return windows. Consecutive observations share 19 of 20 days and are not independent samples. Corrected t-statistics are 0.09 and 0.07, i.e. no edge.",
+    "methodological_bug": "this flaw applies to my earlier rank-IC study too, which is why the momentum result also failed its holdout"
+  },
+  "constant_exposure_construction": {
+    "description": "always hold 20 names, W-curve detections chosen first, remainder filled by 250-day momentum, 20-day holds",
+    "full_sample_2019_2026": {
+      "cagr": 0.3152,
+      "sharpe": 1.341,
+      "max_drawdown": -0.2789,
+      "random_20": {
+        "cagr": 0.2369,
+        "sharpe": 1.162
+      },
+      "beta": {
+        "cagr": 0.2254,
+        "sharpe": 1.166,
+        "max_drawdown": -0.4121
+      }
+    },
+    "holdout_2024_08_plus": {
+      "cagr": -0.0084,
+      "sharpe": 0.051,
+      "max_drawdown": -0.2791,
+      "random_20": {
+        "cagr": -0.0128,
+        "sharpe": 0.003
+      },
+      "beta": {
+        "cagr": 0.0272,
+        "sharpe": 0.251,
+        "max_drawdown": -0.2193
+      }
+    },
+    "verdict": "full sample beat beta by 8.98 points with higher Sharpe; holdout lost to beta by 3.56 points. Classic full-period illusion."
+  },
+  "exit_analysis": {
+    "realised_payoff": 1.83,
+    "design_assumed": 3.0,
+    "exits": {
+      "stop_loss": 170,
+      "target": 47,
+      "time_exit": 50
+    },
+    "finding": "only 4.1% of 20-bar windows in large caps contain both -5% and +15%, so a 15% target is structurally unreachable; the published result relied on a 2600-stock universe including small caps where such moves are common."
+  },
+  "decision": "rejected_for_capital_deployment",
+  "cross_cutting_lesson": "eight strategy families have now been tested. The recurring failure is not weak signals, it is that full-sample statistics on Indian equities 2019-2026 are dominated by the 2020-2021 rally, and overlapping-window significance testing inflates apparent edge by roughly an order of magnitude."
+}

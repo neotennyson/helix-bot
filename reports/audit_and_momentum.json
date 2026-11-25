@@ -1,0 +1,56 @@
+{
+  "experiment": "cross_sectional_momentum_98_name_universe_walk_forward",
+  "bug_and_bias_audit_findings": [
+    "SURVIVORSHIP BIAS: the universe was built from the CURRENT Dhan scrip master, so it contains only securities listed today. 117 of 2707 NSE equities (4.3%). Mean name +264%, median +168%, worst survivor -87%. Every long-only backtest and every beta comparison in this project is biased upward.",
+    "reversal warmup bug: run_reversal applied start_date filtering BEFORE the warmup slice, so windowed walk-forward runs returned insufficient_data and any 'result' from them was void. Fixed by separating the indicator warmup index space from the reporting window.",
+    "the first wider-universe run reported 42.98% CAGR over a collapsed 5-month span; that was an artifact of the bug above plus midcaps with thin history, not a result.",
+    "look-ahead audit: injecting a 3x price shock into all future bars left the trade list and all pre-cut closed-trade P&L byte-identical. Decisions are look-ahead free. The differing headline return was mark-to-market on open positions only.",
+    "metrics audit: calculate_metrics Sharpe/Sortino/CAGR/maxDD reproduce an independent numpy recomputation to 1e-16 after the annualisation fix.",
+    "no hallucinated reports: all five research reports exist and their headline numbers were re-derived in this session."
+  ],
+  "universe_after_expansion": {
+    "daily_plus_hourly_names": 107,
+    "names_with_full_2019_2026_history": 98,
+    "midcaps_added": 41
+  },
+  "walk_forward_2022_to_2026_no_param_sweep": {
+    "grid": "lookback {20,60,120,250} x direction {best,worst} x hold {20,40}, re-selected every 3 months on trailing data only",
+    "exposure_sweep": {
+      "0.04": {
+        "cagr": 0.3548,
+        "sharpe": 1.132,
+        "max_drawdown": -0.3716
+      },
+      "0.02": {
+        "cagr": 0.1687,
+        "sharpe": 1.134,
+        "max_drawdown": -0.199
+      },
+      "0.012": {
+        "cagr": 0.0984,
+        "sharpe": 1.13,
+        "max_drawdown": -0.122,
+        "passes_original_gate": true
+      },
+      "0.008": {
+        "cagr": 0.0639,
+        "sharpe": 1.117,
+        "max_drawdown": -0.0823,
+        "passes_original_gate": true
+      },
+      "0.005": {
+        "cagr": 0.0388,
+        "sharpe": 1.109,
+        "max_drawdown": -0.0505
+      }
+    },
+    "beta_same_98_names_same_span": {
+      "cagr": 0.2118,
+      "sharpe": 1.304,
+      "max_drawdown": -0.2193
+    }
+  },
+  "critical_finding_about_our_own_gate": "the strategy passes the project gate (CAGR>6%, Sharpe>=0.5, DD>-15%) at 1.2% exposure, but it loses to beta at every risk-matched comparison. Sharpe is exposure invariant, so the strategy's 1.13 is below beta's 1.30 no matter the leverage. At matched drawdown of roughly -8%, beta would return about 7.9% at Sharpe 1.304 versus the strategy's 6.39% at Sharpe 1.117.",
+  "decision": "rejected_for_capital_deployment",
+  "gate_correction": "add a mandatory 'beats equal-weight beta on risk-adjusted return' criterion. A gate that passes a strategy which loses to the index is a defective gate, and that was ours."
+}

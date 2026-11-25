@@ -1,0 +1,51 @@
+{
+  "finding": "the best signal in this project was a measurement artifact of my own making",
+  "corrected_momentum_study": {
+    "method": "forward returns measured only on NON-OVERLAPPING rebalance dates, and the reference leg restricted to past losers so momentum is not flattered by simply excluding down-days",
+    "results": [
+      {
+        "lookback": 60,
+        "hold": 20,
+        "excess": 0.001,
+        "t": 0.55
+      },
+      {
+        "lookback": 120,
+        "hold": 20,
+        "excess": 0.0001,
+        "t": 0.04
+      },
+      {
+        "lookback": 250,
+        "hold": 20,
+        "excess": -0.0031,
+        "t": -1.12
+      },
+      {
+        "lookback": 250,
+        "hold": 40,
+        "excess": -0.0053,
+        "t": -0.89
+      },
+      {
+        "lookback": 120,
+        "hold": 40,
+        "excess": 0.0042,
+        "t": 0.97
+      }
+    ],
+    "conclusion": "no horizon reaches significance. The previously reported 'IC +0.0174, t=+2.93' does not survive correction."
+  },
+  "two_methodological_errors_found": {
+    "overlapping_windows": "forward returns were measured at every date with 20-day horizons, so consecutive observations share 19 of 20 days. Not independent samples; t-stat inflated roughly tenfold.",
+    "winner_bias": "momentum returns were compared against an all-names average that included losers. Since markets drift up, excluding winners from the reference leg removes the entire apparent premium."
+  },
+  "implication": "every positive result in this project was produced by the same flawed test. The strategy-level holdout results were already rejecting them; the corrected signal test now explains why, and removes the last claim of a real edge.",
+  "status": "research phase concluded. eight strategy families tested, none survives corrected significance testing or holdout validation.",
+  "artefacts_retained": [
+    "information-coefficient framework, now with overlap and winner-bias corrections applied",
+    "64 unit tests including regression tests for six real bugs",
+    "leak-free walk-forward harness that rejected four full-sample illusions",
+    "documented negative result covering index futures, equity, intraday equity and options"
+  ]
+}

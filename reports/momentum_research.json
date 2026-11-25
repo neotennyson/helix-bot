@@ -1,0 +1,40 @@
+{
+  "experiment": "cross_sectional_momentum_walk_forward",
+  "final_loop_finding": "first configuration in the whole project to clear the risk-adjusted gate on genuinely out-of-sample data, but it does NOT beat buy-and-hold",
+  "signal_basis": "rank IC study (no strategy, no parameters): lb=250/h=20 cross-sectional momentum gives IC +0.0174, t=+2.93, stable across pre-2024 (+0.0287) and 2024+ (+0.0210) at only 12.6x annual turnover",
+  "method": "walk-forward: (lookback, direction, hold) re-selected every ~3 months from a 20-config grid scored ONLY on trailing data; exposure fixed once at 4% per name as a risk-budget decision",
+  "walk_forward_2022-04-18_to_2026-08-03": {
+    "cagr": 0.1311,
+    "sharpe": 1.233,
+    "max_drawdown": -0.1228,
+    "gate": "PASS"
+  },
+  "untouched_holdout_2024-08-19_plus": {
+    "cagr": 0.0599,
+    "sharpe": 0.555,
+    "max_drawdown": -0.1101,
+    "profit_factor": 1.37,
+    "trades": 140,
+    "gate": "marginal fail (5.99% vs 6.00% hurdle)"
+  },
+  "beta_comparison_same_span": {
+    "beta_cagr": 0.1855,
+    "beta_sharpe": 1.218,
+    "beta_max_drawdown": -0.1952,
+    "verdict": "strategy did NOT beat the market. It matched beta's Sharpe while cutting drawdown from -19.5% to -12.3%, i.e. it is a lower-risk version of beta, not alpha."
+  },
+  "control_random_universe": {
+    "random_median_cagr": 0.0208,
+    "positive_share": "11/15",
+    "strategy_percentile": 80,
+    "verdict": "a real but modest selection effect, not a dominant edge"
+  },
+  "decision": "rejected_for_capital_deployment",
+  "why": [
+    "the only metric that clearly beats the market is drawdown, not return",
+    "on untouched data the CAGR lands at 5.99% against a 6.00% hurdle, inside the noise of a 140-trade sample",
+    "outperforming the market was the stated goal and this does not do that",
+    "a 4.3 year walk-forward over a period when beta returned 18.55% is not evidence of a durable edge"
+  ],
+  "what_is_genuinely_useful": "the information-coefficient framework is the durable artefact. It located a statistically significant, turnover-efficient signal (IC +0.0174 at 12.6x turnover) that every strategy-level test in this project had missed or mis-measured."
+}

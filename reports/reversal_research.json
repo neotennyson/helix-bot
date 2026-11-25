@@ -1,0 +1,53 @@
+{
+  "experiment": "cross_sectional_short_term_reversal",
+  "motivation": "external research found a documented daily-reversal edge in Indian equities (96-stock study, IC +0.020 large-cap / +0.025 midcap, +40% over 5.4y) and stated plainly that Indian large-caps are too efficient intraday for any intraday edge to survive",
+  "signal_measurement_no_strategy_no_parameters": {
+    "method": "cross-sectional rank IC of prior N-day return vs forward M-day return across 66 NSE names, 2019-2026",
+    "lb5_h5": {
+      "ic_full": -0.0204,
+      "ic_pre_2024": -0.0179,
+      "ic_2024_plus": -0.0243,
+      "stable": true
+    },
+    "lb10_h5": {
+      "ic_full": -0.0103,
+      "stable": false
+    },
+    "lb10_h10": {
+      "ic_full": -0.0061,
+      "ic_2024_plus": 0.0086,
+      "stable": false,
+      "note": "sign flips"
+    },
+    "verdict": "reversal is real and stable only at lb=5/h=5, and its magnitude matches the published IC of 0.020 almost exactly"
+  },
+  "tradability": {
+    "holdout_window": "2024-08-19 to 2026-09-23",
+    "zero_cost": {
+      "cagr": 0.0248,
+      "sharpe": 0.278,
+      "max_drawdown": -0.1159
+    },
+    "half_cost": {
+      "cagr": -0.026,
+      "sharpe": -0.188,
+      "max_drawdown": -0.1375
+    },
+    "real_cost": {
+      "cagr": -0.0638,
+      "sharpe": -0.529,
+      "max_drawdown": -0.1531,
+      "fees": 478397
+    },
+    "turnover_per_year": 784.8,
+    "conclusion": "the edge is statistically real but far too small to pay for Indian delivery costs. A 5-day signal on a 66-name universe implies several hundred times annual turnover, and a 0.23% round trip on that turnover costs far more than an IC of 0.02 can earn. Signal real, trade unprofitable."
+  },
+  "overfitting_evidence": [
+    "a 12-point parameter sweep on the full 2019-2026 period produced up to +13.68% CAGR, Sharpe 1.68, DD -12.95%, which looked like a gate pass",
+    "the same configuration returned +1.11% CAGR and Sharpe 0.154 on the untouched holdout",
+    "removing the momentum gate and extreme cutoff made results worse (-6.38% holdout), confirming those filters were merely masking a falling knife",
+    "no configuration of the 12-point sweep and no configuration of the 9-point pure-reversal grid passed the holdout gate"
+  ],
+  "decision": "rejected_for_deployment",
+  "portable_lesson": "measure the signal with an information coefficient before building a strategy around it. The IC test identified a real, stable, published-strength edge that every strategy-level test in this project had failed to distinguish from noise, and it also showed the edge is unmonetisable at Indian retail costs."
+}

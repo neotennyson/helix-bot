@@ -1,0 +1,347 @@
+{
+  "status": "ok",
+  "method": "expanding_train_then_unseen_test_per_fold",
+  "selection_leakage": "sleeves chosen from train window only; test window never informs selection",
+  "top_k": 25,
+  "universe_size": 116,
+  "modes": {
+    "volatility_breakout": [
+      "vb_fast",
+      "vb_slow",
+      "vb_conviction",
+      "vb_longonly"
+    ],
+    "trend_breakout": [
+      "tb_fast",
+      "tb_conviction",
+      "tb_longonly"
+    ],
+    "mean_reversion": [
+      "mr_fast",
+      "mr_wide",
+      "mr_longonly"
+    ]
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "train_window": [
+        "2019-01-01T00:00:00+05:30",
+        "2021-03-09T00:00:00+05:30"
+      ],
+      "test_window": [
+        "2021-03-09T00:00:00+05:30",
+        "2023-05-22T00:00:00+05:30"
+      ],
+      "sleeves_selected": [
+        {
+          "symbol": "ADANIGREEN",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "BAJFINANCE",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "ADANIENT",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "BAJAJELEC",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "JINDALSTEL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "AUBANK",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "BAJAJFINSV",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "ADANIGREEN",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_conviction"
+        },
+        {
+          "symbol": "ADANIENT",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "INDIANB",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "HDFCAMC",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "HDFCBANK",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "GRASIM",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "HDFCAMC",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "SAIL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "RBLBANK",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "GRASIM",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "AUBANK",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "TATASTEEL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "ADANIGREEN",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "SBIN",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "HDFCLIFE",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "BAJAJELEC",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "SRF",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "IPCALAB",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        }
+      ],
+      "test_metrics": {
+        "cagr": 0.0007776024787415903,
+        "sharpe": 0.071335471957169,
+        "sortino": 0.09820076241219505,
+        "max_drawdown": -0.01552980546633631,
+        "profit_factor": 1.0574146777974178,
+        "trades": 444,
+        "total_return": 0.0017060876427488214
+      },
+      "average_pairwise_correlation": 0.07739680378794678
+    },
+    {
+      "fold": 1,
+      "train_window": [
+        "2021-03-09T00:00:00+05:30",
+        "2023-05-22T00:00:00+05:30"
+      ],
+      "test_window": [
+        "2023-05-22T00:00:00+05:30",
+        "2025-07-25T00:00:00+05:30"
+      ],
+      "sleeves_selected": [
+        {
+          "symbol": "ADANIENT",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "VBL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "ADANIENT",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_conviction"
+        },
+        {
+          "symbol": "OIL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "JSL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "BAJAJFINSV",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "JSL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "ITC",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "BAJAJFINSV",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "RVNL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "DMART",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "ADANIPOWER",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "GLENMARK",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "BEL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "OIL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "VBL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "APOLLOHOSP",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "TITAN",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "ADANIPOWER",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "ADANIENT",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "TITAN",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "BEL",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_fast"
+        },
+        {
+          "symbol": "SCHAEFFLER",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        },
+        {
+          "symbol": "TRIDENT",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_conviction"
+        },
+        {
+          "symbol": "GLENMARK",
+          "strategy_mode": "trend_breakout",
+          "profile": "tb_longonly"
+        }
+      ],
+      "test_metrics": {
+        "cagr": 0.014147838740957264,
+        "sharpe": 1.0852299177167106,
+        "sortino": 1.527706478362341,
+        "max_drawdown": -0.016884484824757462,
+        "profit_factor": 1.46358929604853,
+        "trades": 409,
+        "total_return": 0.031010922310974465
+      },
+      "average_pairwise_correlation": 0.06898145429305733
+    }
+  ],
+  "stitched_metrics": {
+    "cagr": 0.007397237322405159,
+    "sharpe": 0.5976214003504023,
+    "sortino": 0.8330453587127808,
+    "max_drawdown": -0.016884484824758128,
+    "profit_factor": 1.2463467231229748,
+    "trades": 853,
+    "total_return": 0.03276991730506884,
+    "win_rate": 0.25908558030480655
+  },
+  "cash_hurdle_annual": 0.06,
+  "excess_cagr_over_cash": -0.05260276267759484,
+  "promotion": {
+    "passed": false,
+    "rules": {
+      "excess_cagr_over_cash": 0.06,
+      "minimum_sharpe": 0.5,
+      "minimum_max_drawdown": -0.15,
+      "minimum_profit_factor": 1.1
+    }
+  },
+  "generated_at": "2026-10-08T03:39:23.981508+00:00",
+  "data_source": "dhan_daily_continuous_equity",
+  "research_only": true
+}

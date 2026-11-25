@@ -1,0 +1,70 @@
+{
+  "experiment": "beta_decomposition_and_hedging",
+  "purpose": "final construction test: can a hedged or market-neutral version beat beta, which the unhedged version could not",
+  "capm_decomposition_of_walk_forward_momentum": {
+    "vs_NIFTY_futures": {
+      "beta": 0.294,
+      "alpha_annual": 0.0722,
+      "alpha_t": 0.02,
+      "r2": 0.27
+    },
+    "vs_equal_weight_98": {
+      "beta": 0.294,
+      "alpha_annual": 0.0625,
+      "alpha_t": 0.02,
+      "r2": 0.3
+    },
+    "verdict": "alpha is statistically zero. The return is low-beta equity exposure, not skill."
+  },
+  "hedging_results_2022-04_to_2026-08": {
+    "unhedged_momentum": {
+      "cagr": 0.1022,
+      "sharpe": 1.301,
+      "max_drawdown": -0.1172,
+      "vol": 0.0771
+    },
+    "nifty_futures_benchmark": {
+      "cagr": 0.0904,
+      "sharpe": 0.705,
+      "max_drawdown": -0.1577,
+      "vol": 0.1359
+    },
+    "beta_hedged_0.29": {
+      "cagr": 0.0725,
+      "sharpe": 1.094,
+      "max_drawdown": -0.1015,
+      "vol": 0.066
+    },
+    "beta_hedged_0.50": {
+      "cagr": 0.0511,
+      "sharpe": 0.731,
+      "max_drawdown": -0.0993,
+      "vol": 0.0717
+    },
+    "fully_hedged_1.00": {
+      "cagr": -0.0022,
+      "sharpe": 0.039,
+      "max_drawdown": -0.1715,
+      "vol": 0.1164
+    },
+    "conclusion": "hedging reduces Sharpe at every hedge ratio. The full hedge returns approximately zero, exactly as the CAPM alpha of t=0.02 predicts. There is no alpha to isolate."
+  },
+  "market_neutral_long_short": {
+    "construction": "long top-20 by 250-day momentum, short bottom-20",
+    "periods": 1664,
+    "cagr": -0.0666,
+    "sharpe": -0.292,
+    "max_drawdown": -0.4876,
+    "t_stat": -0.75,
+    "verdict": "no significant cross-sectional spread alpha; the long-short version loses money outright",
+    "practical_note": "shorting delivery equity is not available in India; stock or index futures would be needed and their basis and margin costs would reduce an already negative result"
+  },
+  "benchmark_honesty": {
+    "nifty_futures": "clean benchmark, no survivorship bias, Sharpe 0.705",
+    "equal_weight_98": "Sharpe 1.304 but survivorship biased upward; not a fair target",
+    "finding": "the strategy beats NIFTY on CAGR, Sharpe and drawdown, but only matches an equal-weight diversified basket (1.301 vs 1.304). Its advantage is diversification and risk control, not alpha."
+  },
+  "decision": "rejected_for_capital_deployment_as_alpha",
+  "what_it_actually_is": "a low-beta (0.29), diversified equity implementation that beats concentrated NIFTY exposure on every risk metric and ties an equal-weight basket on Sharpe, with no demonstrable alpha.",
+  "gate_correction_applied": "a valid promotion gate must require beating the correct benchmark on risk-adjusted return, not merely beating cash. Cash was the wrong target for a diversified equity strategy."
+}

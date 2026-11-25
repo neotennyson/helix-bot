@@ -1,0 +1,88 @@
+{
+  "experiment": "hybrid_wider_universe_66_names",
+  "purpose": "test whether concentration on a thin 15-name universe was the cause of the earlier positive result",
+  "window": "2024-08-19 to 2026-10-08",
+  "universe": "66 NSE large/mid-caps with both daily and hourly coverage",
+  "beta": {
+    "cagr": -0.0291,
+    "sharpe": -0.122,
+    "max_drawdown": -0.1588
+  },
+  "top_n_sweep": [
+    {
+      "top_n": 3,
+      "cagr": -0.0375,
+      "sharpe": -0.757,
+      "max_drawdown": -0.0959,
+      "trades": 72
+    },
+    {
+      "top_n": 5,
+      "cagr": -0.0262,
+      "sharpe": -0.722,
+      "max_drawdown": -0.0772,
+      "trades": 120
+    },
+    {
+      "top_n": 10,
+      "cagr": -0.0109,
+      "sharpe": -0.373,
+      "max_drawdown": -0.0555,
+      "trades": 239
+    },
+    {
+      "top_n": 12,
+      "cagr": -0.0095,
+      "sharpe": -0.316,
+      "max_drawdown": -0.0581,
+      "trades": 285
+    },
+    {
+      "top_n": 20,
+      "cagr": -0.0143,
+      "sharpe": -0.541,
+      "max_drawdown": -0.0601,
+      "trades": 451
+    },
+    {
+      "top_n": 25,
+      "cagr": -0.0166,
+      "sharpe": -0.625,
+      "max_drawdown": -0.0625,
+      "trades": 533
+    }
+  ],
+  "luck_test": {
+    "method": "25 random 15-name universes through the identical engine and cost model",
+    "random_cagr_median": -0.0211,
+    "random_cagr_range": [
+      -0.0667,
+      0.0167
+    ],
+    "random_positive_count": "6/25",
+    "original_15_cagr": 0.0162,
+    "original_15_percentile": 96,
+    "conclusion": "the earlier +1.62% on 15 names was a lucky universe draw, not a robust signal. Random 15s also print positives (6/25) and the best of them reaches +1.67%, statistically indistinguishable from the original result."
+  },
+  "per_name_standalone": {
+    "profitable": "21/66",
+    "median_cagr": -0.0063,
+    "best": [
+      "PAYTM +3.33%",
+      "BAJFINANCE +2.67%",
+      "CUMMINSIND +2.61%"
+    ],
+    "worst": [
+      "SUNPHARMA -3.29%",
+      "GODREJCP -3.14%",
+      "INDIGO -3.10%"
+    ]
+  },
+  "decision": "rejected_for_deployment",
+  "why": [
+    "no configuration on the 66-name universe clears the 6% cash hurdle",
+    "the earlier positive result does not survive a wider universe, so it was universe selection, not signal",
+    "strategy still beats beta on drawdown at every setting, which confirms the risk-control mechanism is real, but that alone is not a profit engine"
+  ],
+  "revised_understanding": "intraday execution reliably reduces drawdown versus holding overnight (confirmed repeatedly) but it does not manufacture return. Return magnitude remains the binding constraint across every instrument class and frequency tested."
+}

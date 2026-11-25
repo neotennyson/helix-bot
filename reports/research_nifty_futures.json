@@ -1,0 +1,379 @@
+{
+  "data_source": "dhan_historical_48704",
+  "research_only": true,
+  "quality": {
+    "status": "warning",
+    "symbol": "48704",
+    "bars": 1062,
+    "calendar_days": 57,
+    "median_interval_minutes": 15,
+    "duplicate_timestamps": 0,
+    "out_of_session_bars": 0,
+    "intraday_gaps": 0,
+    "issues": [],
+    "warnings": [
+      "history is shorter than 120 calendar days"
+    ]
+  },
+  "validation": {
+    "method": "walk_forward_with_untouched_holdout",
+    "symbol": "48704",
+    "bar_count": 1062,
+    "candidate_count": 8,
+    "selected_parameters": {
+      "fast_ema": 10,
+      "slow_ema": 30,
+      "trend_adx_min": 19.0,
+      "range_adx_max": 18.0,
+      "target_r": 1.6,
+      "max_holding_bars": 12
+    },
+    "holdout_start": "2026-09-10T11:30:00+05:30",
+    "holdout_end": "2026-09-24T15:15:00+05:30",
+    "holdout_metrics": {
+      "total_return": -0.006113192577054005,
+      "cagr": -0.14633168584549994,
+      "annualized_volatility": 0.020323615341819437,
+      "sharpe": -0.0960471820071832,
+      "sortino": -8.532569782484714,
+      "max_drawdown": -0.006772359088263458,
+      "calmar": -21.607195356651083,
+      "win_rate": 0.2857142857142857,
+      "profit_factor": 0.21853135799079093,
+      "expectancy": -1746.6264505868564,
+      "trades": 7,
+      "wins": 2,
+      "losses": 5,
+      "total_fees": 3438.779302528385,
+      "turnover": 10683112.010387123,
+      "exposure_fraction": 0.124,
+      "average_holding_bars": 4.428571428571429,
+      "benchmark_return": -0.018607348950240743,
+      "best_day": 0.0012560686344365024,
+      "worst_day": -0.0027592660142964354,
+      "monthly_returns": {
+        "2026-09": -0.006113192577054005
+      },
+      "start_equity": 2000000.0,
+      "final_equity": 1987773.614845892
+    },
+    "holdout_calendar_days": 14,
+    "positive_validation_folds": 0,
+    "folds": [
+      {
+        "fold": 0,
+        "train_start": "2026-07-29T09:15:00+05:30",
+        "train_end": "2026-08-25T11:15:00+05:30",
+        "validation_start": "2026-08-25T11:30:00+05:30",
+        "validation_end": "2026-09-10T11:15:00+05:30",
+        "selected_parameters": {
+          "fast_ema": 10,
+          "slow_ema": 30,
+          "trend_adx_min": 19.0,
+          "range_adx_max": 18.0,
+          "target_r": 1.6,
+          "max_holding_bars": 12
+        },
+        "train_metrics": {
+          "total_return": -0.0024491183413825057,
+          "cagr": -0.032528874620670445,
+          "annualized_volatility": 0.009047372996447858,
+          "sharpe": -0.043054009333017756,
+          "sortino": -4.032449705414703,
+          "max_drawdown": -0.003363646486440608,
+          "calmar": -9.670717404994697,
+          "win_rate": 0.25,
+          "profit_factor": 0.1859631676230185,
+          "expectancy": -1224.5591706912437,
+          "trades": 4,
+          "wins": 1,
+          "losses": 3,
+          "total_fees": 2063.473025090837,
+          "turnover": 6442255.094971163,
+          "exposure_fraction": 0.048,
+          "average_holding_bars": 6.25,
+          "benchmark_return": -0.0038343871099326687,
+          "best_day": 0.0,
+          "worst_day": -0.0017255902801815992,
+          "monthly_returns": {
+            "2026-07": -0.0007247787323366728,
+            "2026-08": -0.0017255902801815992
+          },
+          "start_equity": 2000000.0,
+          "final_equity": 1995101.763317235
+        },
+        "validation_metrics": {
+          "total_return": -0.004787196855484788,
+          "cagr": -0.10382225532455891,
+          "annualized_volatility": 0.009811587934479594,
+          "sharpe": -0.12475988858018625,
+          "sortino": -11.068175418691903,
+          "max_drawdown": -0.005723827292805628,
+          "calmar": -18.13860726633992,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "expectancy": -3191.4645703231263,
+          "trades": 3,
+          "wins": 0,
+          "losses": 3,
+          "total_fees": 1525.348455887541,
+          "turnover": 4757050.2273275405,
+          "exposure_fraction": 0.07692307692307693,
+          "average_holding_bars": 8,
+          "benchmark_return": -0.03288054710873012,
+          "best_day": 0.0,
+          "worst_day": -0.0017723979527516365,
+          "monthly_returns": {
+            "2026-08": -0.004787196855484788,
+            "2026-09": 0.0
+          },
+          "start_equity": 2000000.0,
+          "final_equity": 1990425.6062890305
+        },
+        "candidate_count": 8
+      }
+    ],
+    "candidate_results": [
+      {
+        "parameters": {
+          "fast_ema": 10,
+          "slow_ema": 30,
+          "trend_adx_min": 19.0,
+          "range_adx_max": 18.0,
+          "target_r": 1.6,
+          "max_holding_bars": 12
+        },
+        "score": -0.011582655072816514,
+        "train": {
+          "total_return": -0.0024491183413825057,
+          "cagr": -0.032528874620670445,
+          "annualized_volatility": 0.009047372996447858,
+          "sharpe": -0.043054009333017756,
+          "sortino": -4.032449705414703,
+          "max_drawdown": -0.003363646486440608,
+          "calmar": -9.670717404994697,
+          "win_rate": 0.25,
+          "profit_factor": 0.1859631676230185,
+          "expectancy": -1224.5591706912437,
+          "trades": 4,
+          "wins": 1,
+          "losses": 3,
+          "total_fees": 2063.473025090837,
+          "turnover": 6442255.094971163,
+          "exposure_fraction": 0.048,
+          "average_holding_bars": 6.25,
+          "benchmark_return": -0.0038343871099326687,
+          "best_day": 0.0,
+          "worst_day": -0.0017255902801815992,
+          "monthly_returns": {
+            "2026-07": -0.0007247787323366728,
+            "2026-08": -0.0017255902801815992
+          },
+          "start_equity": 2000000.0,
+          "final_equity": 1995101.763317235
+        },
+        "validation": {
+          "total_return": -0.004787196855484788,
+          "cagr": -0.10382225532455891,
+          "annualized_volatility": 0.009811587934479594,
+          "sharpe": -0.12475988858018625,
+          "sortino": -11.068175418691903,
+          "max_drawdown": -0.005723827292805628,
+          "calmar": -18.13860726633992,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "expectancy": -3191.4645703231263,
+          "trades": 3,
+          "wins": 0,
+          "losses": 3,
+          "total_fees": 1525.348455887541,
+          "turnover": 4757050.2273275405,
+          "exposure_fraction": 0.07692307692307693,
+          "average_holding_bars": 8,
+          "benchmark_return": -0.03288054710873012,
+          "best_day": 0.0,
+          "worst_day": -0.0017723979527516365,
+          "monthly_returns": {
+            "2026-08": -0.004787196855484788,
+            "2026-09": 0.0
+          },
+          "start_equity": 2000000.0,
+          "final_equity": 1990425.6062890305
+        },
+        "test": {
+          "total_return": -0.006113192577054005,
+          "cagr": -0.14633168584549994,
+          "annualized_volatility": 0.020323615341819437,
+          "sharpe": -0.0960471820071832,
+          "sortino": -8.532569782484714,
+          "max_drawdown": -0.006772359088263458,
+          "calmar": -21.607195356651083,
+          "win_rate": 0.2857142857142857,
+          "profit_factor": 0.21853135799079093,
+          "expectancy": -1746.6264505868564,
+          "trades": 7,
+          "wins": 2,
+          "losses": 5,
+          "total_fees": 3438.779302528385,
+          "turnover": 10683112.010387123,
+          "exposure_fraction": 0.124,
+          "average_holding_bars": 4.428571428571429,
+          "benchmark_return": -0.018607348950240743,
+          "best_day": 0.0012560686344365024,
+          "worst_day": -0.0027592660142964354,
+          "monthly_returns": {
+            "2026-09": -0.006113192577054005
+          },
+          "start_equity": 2000000.0,
+          "final_equity": 1987773.614845892
+        }
+      }
+    ],
+    "promotion": {
+      "passed": false,
+      "status": "not_eligible_for_paper_review",
+      "rules": {
+        "positive_holdout_return": true,
+        "max_drawdown_at_least_minus_15_percent": true,
+        "profit_factor_at_least_1_10": true,
+        "minimum_holdout_trades": 20,
+        "minimum_holdout_calendar_days": 20,
+        "minimum_positive_validation_folds": 1
+      }
+    }
+  },
+  "selected_strategy": {
+    "fast_ema": 10,
+    "slow_ema": 30,
+    "atr_period": 14,
+    "rsi_period": 14,
+    "adx_period": 14,
+    "trend_adx_min": 19.0,
+    "range_adx_max": 18.0,
+    "trend_threshold_atr": 0.45,
+    "range_threshold_atr": 0.65,
+    "rsi_trend_low": 50.0,
+    "rsi_trend_high": 78.0,
+    "rsi_range_long": 34.0,
+    "rsi_range_short": 66.0,
+    "min_atr_pct": 0.0007,
+    "max_atr_pct": 0.015,
+    "min_volume_ratio": 0.75,
+    "confidence_threshold": 0.56,
+    "target_r": 1.6,
+    "stop_atr_multiple": 1.15,
+    "max_holding_bars": 12,
+    "allow_short": true,
+    "intraday_only": true,
+    "session_start": "09:30",
+    "flatten_at": "15:05",
+    "expiry_entry_cutoff": "13:30",
+    "expiry_flatten_at": "14:30",
+    "use_daily_bias": true,
+    "daily_fast_ema": 20,
+    "daily_slow_ema": 50
+  },
+  "cost_stress": {
+    "base": {
+      "metrics": {
+        "total_return": -0.0024491183413825057,
+        "cagr": -0.015522589537298792,
+        "annualized_volatility": 0.006207663673022956,
+        "sharpe": -0.02951162193293102,
+        "sortino": -2.765422806975646,
+        "max_drawdown": -0.003363646486440608,
+        "calmar": -4.614810028304939,
+        "win_rate": 0.25,
+        "profit_factor": 0.1859631676230185,
+        "expectancy": -1224.5591706912437,
+        "trades": 4,
+        "wins": 1,
+        "losses": 3,
+        "total_fees": 2063.473025090837,
+        "turnover": 6442255.094971163,
+        "exposure_fraction": 0.022598870056497175,
+        "average_holding_bars": 6.25,
+        "benchmark_return": -0.05444829696104425,
+        "best_day": 0.0,
+        "worst_day": -0.0017255902801815992,
+        "monthly_returns": {
+          "2026-07": -0.0007247787323366728,
+          "2026-08": -0.0017255902801815992,
+          "2026-09": 0.0
+        },
+        "start_equity": 2000000.0,
+        "final_equity": 1995101.763317235
+      },
+      "trades": 4
+    },
+    "adverse": {
+      "metrics": {
+        "total_return": -0.003883590825095262,
+        "cagr": -0.02451959574713558,
+        "annualized_volatility": 0.006612804036813136,
+        "sharpe": -0.04397797177580678,
+        "sortino": -3.8869471534507896,
+        "max_drawdown": -0.0046152209477394734,
+        "calmar": -5.31276747631015,
+        "win_rate": 0.25,
+        "profit_factor": 0.030431466520537694,
+        "expectancy": -1941.7954125476235,
+        "trades": 4,
+        "wins": 1,
+        "losses": 3,
+        "total_fees": 3000.689592123096,
+        "turnover": 6442577.707570966,
+        "exposure_fraction": 0.017890772128060263,
+        "average_holding_bars": 5,
+        "benchmark_return": -0.05444829696104425,
+        "best_day": 0.0,
+        "worst_day": -0.002447315565340835,
+        "monthly_returns": {
+          "2026-07": -0.0014397989020183966,
+          "2026-08": -0.002447315565340835,
+          "2026-09": 0.0
+        },
+        "start_equity": 2000000.0,
+        "final_equity": 1992232.8183498094
+      },
+      "trades": 4
+    },
+    "severe": {
+      "metrics": {
+        "total_return": -0.004056414139669395,
+        "cagr": -0.025598847687124726,
+        "annualized_volatility": 0.006848342758934225,
+        "sharpe": -0.04435787257161525,
+        "sortino": -3.7852667364276154,
+        "max_drawdown": -0.004606290776504651,
+        "calmar": -5.5573668552790885,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "expectancy": -2704.276093112889,
+        "trades": 3,
+        "wins": 0,
+        "losses": 3,
+        "total_fees": 2952.4875481567356,
+        "turnover": 4830702.060034408,
+        "exposure_fraction": 0.011299435028248588,
+        "average_holding_bars": 4.333333333333333,
+        "benchmark_return": -0.05444829696104425,
+        "best_day": 0.0,
+        "worst_day": -0.002154863339058566,
+        "monthly_returns": {
+          "2026-07": -0.002154863339058566,
+          "2026-08": -0.0019056572315158116,
+          "2026-09": 0.0
+        },
+        "start_equity": 2000000.0,
+        "final_equity": 1991887.1717206612
+      },
+      "trades": 3
+    }
+  },
+  "readiness": {
+    "data_is_marked_research_only": true,
+    "profit_is_guaranteed": false,
+    "next_gate": "obtain point-in-time contract data, calibrate costs, and complete a forward paper-trading observation period"
+  }
+}

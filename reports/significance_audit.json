@@ -1,0 +1,79 @@
+{
+  "experiment": "overlap_corrected_significance_audit",
+  "purpose": "re-test every information-coefficient claim in this project after discovering the overlapping-window flaw",
+  "flaw": "forward returns were measured at every date with fixed horizons, so consecutive observations share h-1 of h days. Those samples are not independent and the t-statistic is inflated by roughly sqrt(h).",
+  "corrected_results": {
+    "reversal_lb5_h5": {
+      "ic_naive": -0.0297,
+      "t_naive": -7.74,
+      "ic_disjoint": -0.035,
+      "t_correct": -4.27,
+      "n": 382,
+      "verdict": "REAL EDGE"
+    },
+    "reversal_lb8_h5": {
+      "ic_naive": -0.02,
+      "t_naive": -2.23,
+      "t_correct": -2.23,
+      "verdict": "weak edge"
+    },
+    "reversal_lb10_h5": {
+      "ic_naive": -0.0161,
+      "t_naive": -4.12,
+      "t_correct": -1.72,
+      "verdict": "not significant"
+    },
+    "reversal_lb60_h40": {
+      "ic_naive": -0.0088,
+      "t_naive": -2.09,
+      "t_correct": -1.5,
+      "verdict": "not significant"
+    },
+    "momentum_lb250_h20": {
+      "ic_naive": 0.0284,
+      "t_naive": 5.62,
+      "ic_disjoint": 0.0304,
+      "t_correct": 1.39,
+      "verdict": "ARTIFACT"
+    },
+    "momentum_lb250_h40": {
+      "ic_naive": 0.0268,
+      "t_naive": 5.44,
+      "ic_disjoint": 0.0446,
+      "t_correct": 1.31,
+      "verdict": "ARTIFACT"
+    },
+    "momentum_lb20_h20": {
+      "ic_naive": -0.0029,
+      "t_naive": -0.75,
+      "t_correct": 0.14,
+      "verdict": "none"
+    }
+  },
+  "key_impact": "the cross-sectional momentum signal that drove the previous final recommendation (IC +0.0174, t=2.93) is not statistically real. Corrected t is 1.39. The entire momentum case rested on a measurement artifact.",
+  "the_one_real_signal": {
+    "definition": "rank by trailing 5-day return, buy the losers, hold 5 days",
+    "ic": -0.035,
+    "t": -4.27,
+    "disjoint_samples": 382,
+    "only_valid_at_5_day_horizon": "at 10, 20 and 40 day holds the IC collapses to non-significance, so the edge cannot be extended to lower turnover",
+    "gross_annualised_edge": -0.0077,
+    "annual_cost_drag": 0.1159,
+    "net": -0.1236,
+    "measured_directly": {
+      "zero_cost_cagr": 0.0248,
+      "real_cost_cagr": -0.0638
+    },
+    "conclusion": "statistically real and economically unmonetisable. Indian delivery costs of roughly 0.23 percent per round trip against 50x annual turnover exceed the gross edge by about 9 percent per year."
+  },
+  "decision": "research_concluded",
+  "final_position": "eight strategy families tested across index futures, equity, intraday equity and options. Exactly one signal survives rigorous significance testing, and it cannot be traded profitably at Indian retail costs. The one demonstrable advantage available to a professional is lower execution cost and longer-horizon capacity, neither of which this project can replicate.",
+  "what_the_project_actually_delivered": [
+    "a corrected Sharpe annualisation bug that understated every result by 15.9x",
+    "a paper engine history-truncation bug that reported wrong equity",
+    "survivorship bias across the entire universe (117 of 2707 NSE equities)",
+    "an overlapping-window significance flaw that fabricated the momentum result",
+    "a leakage-free walk-forward harness that caught a bogus 43 percent CAGR",
+    "64 passing tests and a documented, reproducible negative result"
+  ]
+}
